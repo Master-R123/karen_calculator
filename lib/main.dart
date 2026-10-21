@@ -89,7 +89,6 @@ class _TacticalCalculatorScreenState extends State<TacticalCalculatorScreen> {
   }
 
   double _parseAndEval(String exp) {
-    // Basic fallback evaluator for tactical grid
     exp = exp.replaceAll(' ', '');
     if (exp.contains('+')) {
       var parts = exp.split('+');
@@ -125,7 +124,6 @@ class _TacticalCalculatorScreenState extends State<TacticalCalculatorScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            // Top Control Bar
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
               child: Row(
@@ -159,8 +157,6 @@ class _TacticalCalculatorScreenState extends State<TacticalCalculatorScreen> {
                 ],
               ),
             ),
-
-            // Display Screen
             Expanded(
               child: Container(
                 width: double.infinity,
@@ -180,7 +176,7 @@ class _TacticalCalculatorScreenState extends State<TacticalCalculatorScreen> {
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
-                  crossAxisAlignment: CrossAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.end, // Fixed spelling!
                   children: [
                     SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
@@ -212,8 +208,6 @@ class _TacticalCalculatorScreenState extends State<TacticalCalculatorScreen> {
                 ),
               ),
             ),
-
-            // Scientific Expandable Grid
             AnimatedContainer(
               duration: const Duration(milliseconds: 300),
               height: _isScientificOpen ? 180 : 0,
@@ -252,8 +246,6 @@ class _TacticalCalculatorScreenState extends State<TacticalCalculatorScreen> {
                 ),
               ),
             ),
-
-            // Standard Numpad Grid
             Padding(
               padding: const EdgeInsets.all(12.0),
               child: Column(
@@ -349,7 +341,7 @@ class _TacticalCalculatorScreenState extends State<TacticalCalculatorScreen> {
         return Container(
           padding: const EdgeInsets.all(16),
           child: Column(
-            crossAxisAlignment: CrossAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start, // Fixed spelling!
             children: [
               const Text(
                 'TACTICAL LOGS',
